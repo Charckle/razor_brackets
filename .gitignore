@@ -1,0 +1,10 @@
+__pycache__/
+env
+*.pyc
+*.exe
+database.db
+to-do.txt
+.vs
+.index/
+logs/
+*.log

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-Player Bracket</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .bracket-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .bracket, .center-bracket {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bracket {
+            width: 30%;
+        }
+
+        .center-bracket {
+            width: 10%;
+        }
+
+        .player-box {
+            border: 1px solid #444;
+            border-radius: 8px;
+            margin: 5px 0;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            background: #1e1e1e;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .player-box.winner {
+            border: 2px solid #ffeb3b;
+        }
+
+        .round {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .line {
+            width: 2px;
+            height: 50px;
+            background-color: #444;
+            margin: 10px auto;
+        }
+
+        .winner-box {
+            border: 2px dashed #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            background: #1e1e1e;
+            color: #ff9800;
+            font-weight: bold;
+            width: 200px;
+            text-align: center;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .winner-box.empty {
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Lines between boxes */
+        .connection-line {
+            width: 80px;
+            height: 2px;
+            background-color: #444;
+            margin: 0;
+        }
+
+        .connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bracket-container">
+        <!-- Left Bracket -->
+        <div class="bracket">
+            <div class="round">
+                <div class="player-box" id="player1">Player 1</div>
+                <div class="player-box" id="player2">Player 2</div>
+                <div class="connector"><div class="connection-line"></div></div>
+                <div class="player-box" id="player3">Player 3</div>
+                <div class="player-box" id="player4">Player 4</div>
+            </div>
+            <div class="line"></div>
+            <div class="round">
+                <div class="winner-box empty" id="winner1">Winner of Match 1</div>
+            </div>
+        </div>
+
+        <!-- Center Bracket -->
+        <div class="center-bracket">
+            <div class="line"></div>
+            <div class="winner-box empty" id="final-winner">Final Winner</div>
+            <div class="line"></div>
+        </div>
+
+        <!-- Right Bracket -->
+        <div class="bracket">
+            <div class="round">
+                <div class="player-box" id="player5">Player 5</div>
+                <div class="player-box" id="player6">Player 6</div>
+                <div class="connector"><div class="connection-line"></div></div>
+                <div class="player-box" id="player7">Player 7</div>
+                <div class="player-box" id="player8">Player 8</div>
+            </div>
+            <div class="line"></div>
+            <div class="round">
+                <div class="winner-box empty" id="winner2">Winner of Match 2</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulating winners for demonstration
+        document.getElementById('player1').classList.add('winner');
+        document.getElementById('winner1').classList.remove('empty');
+        document.getElementById('winner1').textContent = 'Player 1';
+
+        document.getElementById('player5').classList.add('winner');
+        document.getElementById('winner2').classList.remove('empty');
+        document.getElementById('winner2').textContent = 'Player 5';
+
+        // Simulate final winner
+        document.getElementById('final-winner').classList.remove('empty');
+        document.getElementById('final-winner').textContent = 'Player 1';
+    </script>
+</body>
+</html>
