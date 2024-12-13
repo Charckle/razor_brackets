@@ -5,23 +5,19 @@ from flask import Blueprint, request, render_template, \
                   flash, g, session, redirect, url_for, jsonify, send_file, Response, abort
 
 # Import module forms
-from app.main_page_module.forms import form_dicts
 #from app.main_page_module.p_objects.note_o import N_obj
 
 
 from wrappers import login_required
 from app.pylavor import Pylavor
 from app.main_page_module.other import Randoms
-from app.main_page_module.excel_obj import ExcelO
-from app.main_page_module.gears import Gears_obj
-from app.main_page_module.email_sender import EmS
+
 
 from app import app, targets_ram
 
 #import os
 import re
 import os
-import zipfile
 import io
 import pathlib
 from passlib.hash import sha512_crypt
@@ -39,18 +35,10 @@ def inject_to_every_page():
 
 
 # Set the route and accepted methods
-@main_page_module.route('/base_', methods=['GET'])
-@login_required
-def base_():
-    return render_template("main_page_module/base.html")
+@main_page_module.route('/', methods=['GET'])
+def index():
+    return render_template("main_page_module/index.html")
 
-
-# all 
-
-# games
-# id, name
-# players
-# id, name
 
 
 
@@ -65,7 +53,7 @@ def base_():
 # Set the route and accepted methods
 @main_page_module.route('/', methods=['GET'])
 @login_required
-def index():
+def inde_x():
     
     try:
         settings = Gears_obj.load_settings()

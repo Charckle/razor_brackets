@@ -1,0 +1,39 @@
+{
+    "round_L1": [
+                [
+                    ["Player 1", false],
+                    ["Player 2", true],
+                    ["vs1", true],
+                    ["Player 3", false],
+                    ["Player 4", false]
+                ],
+                [
+                    ["Player 5", false],
+                    ["Player 6", false],
+                    ["vs1", true],
+                    ["Player 7", false],
+                    ["Player 8", false]
+                ]
+            ],
+    "winner": {
+        "winner": "",
+        "player_1": ["", false],
+        "player_2": ["", false]
+    },
+    "round_R1": [
+                [
+                    ["Player 9", false],
+                    ["Player 10", false],
+                    ["vs1", true],
+                    ["Player 11", false],
+                    ["Player 12", false]
+                ],
+                [
+                    ["Player 13", false],
+                    ["Player 14", true],
+                    ["vs1", true],
+                    ["Player 15", false],
+                    ["Player 16", false]
+                ]
+            ]
+}
