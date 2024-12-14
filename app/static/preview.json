@@ -11,11 +11,11 @@
                     ["Player 5", false],
                     ["Player 6", false],
                     ["vs1", true],
-                    ["Player 7", false],
+                    ["Player 7", true],
                     ["Player 8", false]
                 ],
                 [
-                    ["Player 9", false],
+                    ["Player 9", true],
                     ["Player 10", false],
                     ["vs1", true],
                     ["Player 11", false],
@@ -31,39 +31,25 @@
             ],
     "round_L2": [
                 [
-                    ["---", false],
-                    ["---", false],
+                    ["Player 2", false],
+                    ["Player 7", true],
                     ["vs1", true],
-                    ["---", false],
-                    ["---", false]
-                ],
-                [
-                    ["---", false],
-                    ["---", false],
-                    ["vs1", true],
-                    ["---", false],
-                    ["---", false]
+                    ["Player 9", false],
+                    ["Player 14", false]
                 ]
             ],
     "winner": {
-        "winner": "",
-        "player_1": ["", false],
-        "player_2": ["", false]
+        "winner": "Player 7",
+        "player_1": ["Player 7", true],
+        "player_2": ["Player 25", false]
     },
     "round_R2": [
                 [
-                    ["---", false],
-                    ["---", false],
+                    ["Player 20", false],
+                    ["Player 22", false],
                     ["vs1", true],
-                    ["---", false],
-                    ["---", false]
-                ],
-                [
-                    ["---", false],
-                    ["---", false],
-                    ["vs1", true],
-                    ["---", false],
-                    ["---", false]
+                    ["Player 25", true],
+                    ["Player 30", false]
                 ]
             ],
     "round_R1": [
@@ -72,7 +58,7 @@
                     ["Player 18", false],
                     ["vs1", true],
                     ["Player 19", false],
-                    ["Player 20", false]
+                    ["Player 20", true]
                 ],
                 [
                     ["Player 21", false],
@@ -82,7 +68,7 @@
                     ["Player 24", false]
                 ],
                 [
-                    ["Player 25", false],
+                    ["Player 25", true],
                     ["Player 26", false],
                     ["vs1", true],
                     ["Player 27", false],

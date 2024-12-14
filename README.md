@@ -17,3 +17,7 @@ App for tourni brackets
     - `preview.json` - the one you edit and check on the `/preview/` link, to see what you will display on the index
     - `template.json` - this one is for backup. Everytime you start a new tourni, you can use this a a starting point
 - basically, you run the page, using whatever (raspberry pi?), then you manually edit the files to display the ccurrent score. That is it. Simple, but effective.
+
+![public view](./doc_data/brackets.png)
+![preview view](./doc_data/preview.png)
+![json file](./doc_data/json.png)
