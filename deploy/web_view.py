@@ -13,7 +13,7 @@ class WebBrowser(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    url = QUrl("https://example.com")  # Replace with your desired URL
+    url = QUrl("http://localhost:5000")  # Replace with your desired URL
     window = WebBrowser(url)
     sys.exit(app.exec_())
 
