@@ -43,3 +43,9 @@ WantedBy=multi-user.target
 - `sudo systemctl enable razor_brackets_server.service`
 - `sudo systemctl daemon-reload`
 - `sudo systemctl start razor_brackets_server.service`
+
+## kiosk mode
+- browser in kiosk mode do not work on pi zero
+- gt5 does nto want to install on zero or other raspberries, so my costum FE does not work
+- using rpi4 kiosk mode works, but the cursos decided to not give a fuck, and does not want to be hidden or moved in any way.
+- fuck this shit.
