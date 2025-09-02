@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Bracket Layout</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .bracket-container {
+            display: flex;
+            justify-content: space-evenly; /* Spread columns evenly */
+            align-items: center; /* Center vertically */
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .bracket, .center-bracket {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .round_obj {
+            width: 30%;
+            place-items: center; /* Centers both horizontally and vertically */
+
+        }
+
+
+        .player-box {
+            border: 1px solid #444;
+            border-radius: 8px;
+            margin: 5px 0;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            background: #1e1e1e;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .player-box.winner {
+            border: 2px solid #ffeb3b;
+            
+        }
+
+        .match_obj {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .line {
+            width: 2px;
+            height: 50px;
+            background-color: #444;
+            margin: 10px auto;
+        }
+
+        .winner-box {
+            border: 2px dashed #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            background: #1e1e1e;
+            color: #ff9800;
+            font-weight: bold;
+            width: 200px;
+            text-align: center;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .winner-box.empty {
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Lines between boxes */
+        .connection-line {
+            width: 80px;
+            height: 2px;
+            background-color: #444;
+            margin: 0;
+        }
+
+        .connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bracket-container" id="main_div">
+        <!-- Left Bracket -->
+        <div class="round_obj">
+            <div class="match_obj">
+                <div class="player-box" id="player1">Player 1</div>
+                <div class="player-box winner" id="player2">Player 2</div>
+                <div class="connector"><div class="connection-line"></div></div>
+                <div class="player-box" id="player3">Player 3</div>
+                <div class="player-box" id="player4">Player 4</div>
+            </div>
+
+            <div class="connector"><div class="connection-line"></div></div>
+
+
+            <div class="match_obj">
+                <div class="player-box" id="player1">Player 1</div>
+                <div class="player-box winner" id="player2">Player 2</div>
+                <div class="connector"><div class="connection-line"></div></div>
+                <div class="player-box" id="player3">Player 3</div>
+                <div class="player-box" id="player4">Player 4</div>
+            </div>
+
+            <div class="connector"><div class="connection-line"></div></div>
+
+
+            <div class="match_obj">
+                <div class="player-box" id="player1">Player 1</div>
+                <div class="player-box winner" id="player2">Player 2</div>
+                <div class="connector"><div class="connection-line"></div></div>
+                <div class="player-box" id="player3">Player 3</div>
+                <div class="player-box" id="player4">Player 4</div>
+            </div>
+
+            <div class="connector"><div class="connection-line"></div></div>
+
+
+            <div class="match_obj">
+                <div class="player-box" id="player1">Player 1</div>
+                <div class="player-box winner" id="player2">Player 2</div>
+                <div class="connector"><div class="connection-line"></div></div>
+                <div class="player-box" id="player3">Player 3</div>
+                <div class="player-box" id="player4">Player 4</div>
+            </div>
+
+        </div>
+
+        <!-- Left round_obj -->
+        <div class="round_obj">
+            <div class="match_obj">
+                <div class="player-box" id="player1">Player 1</div>
+                <div class="player-box winner" id="player2">Player 2</div>
+                <div class="connector"><div class="connection-line"></div></div>
+
+                <div class="player-box" id="player3">Player 3</div>
+                <div class="player-box" id="player4">Player 4</div>
+            </div>
+        </div>
+
+        <!-- Center round_obj -->
+        <div class="round_obj">
+          <div class="player-box" id="player1">---</div>
+            <div class="line"></div>
+            <div class="winner-box empty" id="final-winner">Final Winner</div>
+            <div class="line"></div>
+            <div class="player-box" id="player1">---</div>
+        </div>
+
+
+        <!-- Right round_obj -->
+        <div class="round_obj">
+            <div class="match_obj">
+                <div class="player-box" id="player5">---</div>
+                <div class="player-box" id="player6">---</div>
+                <div class="connector"><div class="connection-line"></div></div>
+
+                <div class="player-box" id="player7">---</div>
+                <div class="player-box" id="player8">---</div>
+            </div>
+        </div>
+
+        <!-- Right round_obj -->
+        <div class="round_obj">
+            <div class="match_obj">
+                <div class="player-box" id="player5">Player 5</div>
+                <div class="player-box" id="player6">Player 6</div>
+                <div class="connector"><div class="connection-line"></div></div>
+
+                <div class="player-box" id="player7">Player 7</div>
+                <div class="player-box" id="player8">Player 8</div>
+            </div>
+
+            <div class="connector"><div class="connection-line"></div></div>
+
+
+            <div class="match_obj">
+                <div class="player-box" id="player1">Player 1</div>
+                <div class="player-box winner" id="player2">Player 2</div>
+                <div class="connector"><div class="connection-line"></div></div>
+                <div class="player-box" id="player3">Player 3</div>
+                <div class="player-box" id="player4">Player 4</div>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</body>
+
+<script>
+  let brackets_json = null; // Global variable to store the fetched JSON
+
+  var main_div = document.getElementById("main_div");
+
+
+
+  function _onLoad() {
+    const url = "{{ url_for('static', filename='brackets.json') }}"; // Replace with your JSON file URL
+
+    // Start the JSON fetching process
+    startFetching(url);
+  }
+
+  function startFetching(url) {
+    // Initial fetch when the page loads
+    fetchJSON(url);
+
+    // Set up interval to fetch every 5 seconds
+    setInterval(() => fetchJSON(url), 5000);
+  } 
+
+  function fetchJSON(url) {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            //console.log("Fetched JSON data:", data);
+            brackets_json = data; 
+            //console.log(brackets_json);
+            createBrackets();
+        })
+        .catch(error => {
+            console.error("Error fetching JSON:", error);
+        });
+  }
+
+  function createBrackets() {
+    // empty the div
+    main_div.innerHTML = "";
+
+    for (const key in brackets_json) {
+      if (key == "winner") {
+        var winner_b = cWinnerBracket(brackets_json[key]);
+        main_div.appendChild(winner_b);
+
+      } else if (key.includes("round")) {
+        var round_data = brackets_json[key];
+
+        var round_b = cRoundBracket(round_data);
+        main_div.appendChild(round_b);
+      };
+
+
+    };
+
+
+  };
+
+
+  function cWinnerBracket(winner_data) {
+    var winner_name = winner_data["winner"];
+    var player_1_data = winner_data["player_1"];
+    var player_2_data = winner_data["player_2"];
+
+    var bracket = document.createElement('div');
+    bracket.className = "round_obj";
+
+    // first player
+    var player_box = cPlayerBox(player_1_data);
+    bracket.appendChild(player_box);
+
+    var line = cHLine();
+    bracket.appendChild(line);
+
+    var winner_box = document.createElement('div');
+    if (winner_name == "") {
+      winner_box.className = "winner-box empty";
+      winner_box.innerHTML = "Final Winner"
+    } else {
+      winner_box.className = "winner-box";
+      winner_box.innerHTML = winner_name
+    };
+
+    bracket.appendChild(winner_box);
+
+
+    var line = cHLine();
+    bracket.appendChild(line);
+
+    // second player
+    var player_box = cPlayerBox(player_2_data);
+    bracket.appendChild(player_box);
+
+    return bracket
+  };
+
+
+  function cRoundBracket(round_data) {
+    var bracket = document.createElement('div');
+    bracket.className = "round_obj";
+    
+    // create matches
+    
+    for (const match_data_id in round_data) {
+      var match_data = round_data[match_data_id]
+      var match = document.createElement('div');
+      match.className = "match_obj";
+
+      // add players
+      for (const player_data of match_data) {
+        var player_box = cPlayerBox(player_data);
+        match.appendChild(player_box);
+
+      }
+      
+      bracket.appendChild(match);
+
+      // if last player, dont place the line divider
+      if (round_data.length != (Number(match_data_id) + 1)) {
+        var player_box = cVLine();
+        bracket.appendChild(player_box);
+      }
+      
+
+      };
+
+
+    return bracket
+  };
+
+
+    
+
+
+  function cPlayerBox(player_data) {
+    if (player_data[0].includes("vs")) {
+      var player_box = cVLine();
+
+    } else {
+      var player_box = document.createElement('div');
+      if (player_data[0] == "") {
+        player_box.innerHTML = "---"
+      } else {
+        player_box.innerHTML = player_data[0]
+      }
+
+      if (player_data[1] == false) {
+        player_box.className = "player-box";
+      } else {
+        player_box.className = "player-box winner";
+      }
+
+    };
+
+    return player_box
+  };
+
+
+  function cHLine() {
+    var line = document.createElement('div');
+    line.className = "line";
+
+    return line
+  };
+
+
+  function cVLine() {
+    var line = document.createElement('div');
+    line.className = "connector";
+
+    var line_conn = document.createElement('div');
+    line_conn.className = "connection-line";
+
+    line.appendChild(line_conn);
+
+
+    return line
+  };
+
+  window.onload = function() {
+    _onLoad();
+  };
+
+
+</script>
+
+</html>

@@ -1,0 +1,85 @@
+{
+    "round_L1": [
+                [
+                    ["Player 1", false],
+                    ["Player 2", false],
+                    ["vs1", true],
+                    ["Player 3", false],
+                    ["Player 4", false]
+                ],
+                [
+                    ["Player 5", false],
+                    ["Player 6", false],
+                    ["vs1", true],
+                    ["Player 7", false],
+                    ["Player 8", false]
+                ],
+                [
+                    ["Player 9", false],
+                    ["Player 10", false],
+                    ["vs1", true],
+                    ["Player 11", false],
+                    ["Player 12", false]
+                ],
+                [
+                    ["Player 13", false],
+                    ["Player 14", false],
+                    ["vs1", true],
+                    ["Player 15", false],
+                    ["Player 16", false]
+                ]
+            ],
+    "round_L2": [
+                [
+                    ["---", false],
+                    ["---", false],
+                    ["vs1", true],
+                    ["---", false],
+                    ["---", false]
+                ]
+            ],
+    "winner": {
+        "winner": "",
+        "player_1": ["", false],
+        "player_2": ["", false]
+    },
+    "round_R2": [
+                [
+                    ["---", false],
+                    ["---", false],
+                    ["vs1", true],
+                    ["---", false],
+                    ["---", false]
+                ]
+            ],
+    "round_R1": [
+                [
+                    ["Player 17", false],
+                    ["Player 18", false],
+                    ["vs1", true],
+                    ["Player 19", false],
+                    ["Player 20", false]
+                ],
+                [
+                    ["Player 21", false],
+                    ["Player 22", false],
+                    ["vs1", true],
+                    ["Player 23", false],
+                    ["Player 24", false]
+                ],
+                [
+                    ["Player 25", false],
+                    ["Player 26", false],
+                    ["vs1", true],
+                    ["Player 27", false],
+                    ["Player 28", false]
+                ],
+                [
+                    ["Player 29", false],
+                    ["Player 30", false],
+                    ["vs1", true],
+                    ["Player 31", false],
+                    ["Player 32", false]
+                ]
+            ]
+}
